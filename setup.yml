@@ -72,6 +72,7 @@
 
     - name: Run Database
       shell: sqlplus / 
+      async: 15
       register: cmd_output 
 
     - ansible.builtin.debug:
