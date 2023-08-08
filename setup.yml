@@ -71,7 +71,7 @@
         var: cmd_output
 
     - name: Run Database
-      shell: sqlplus / 
+      shell: (sqlplus /) & sleep 5 ; kill $!
       async: 15
       register: cmd_output 
 
