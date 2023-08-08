@@ -70,7 +70,7 @@
     - ansible.builtin.debug:
         var: cmd_output
 
-    - name: Run Database
+    - name: Run Database and kill it (will fail for demo purposes)
       shell: (sqlplus /) & sleep 5 ; kill $!
       register: cmd_output 
       ignore_errors: True
