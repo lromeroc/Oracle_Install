@@ -72,8 +72,8 @@
 
     - name: Run Database
       shell: (sqlplus /) & sleep 5 ; kill $!
-      async: 15
       register: cmd_output 
+      ignore_errors: True
 
     - ansible.builtin.debug:
         var: cmd_output
