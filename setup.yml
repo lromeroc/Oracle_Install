@@ -3,10 +3,10 @@
   hosts: all
   become: yes
   tasks:
-    - name: Copy rpm file to server
+    - name: Copy SQLPlus to Server
       copy:
-       src: package.rpm
-       dest: /tmp/package.rpm
+       src: oracle-instantclient-sqlplus-21.11.0.0.0-1.el8.x86_64.rpm
+       dest: ~/oracle-instantclient-sqlplus-21.11.0.0.0-1.el8.x86_64.rpm
        
     - name: Download Database PreInstall
       get_url: 
