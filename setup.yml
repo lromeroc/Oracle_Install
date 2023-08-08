@@ -31,36 +31,40 @@
        dest: ~/dl/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm
 
     - name: Install Instantclient
-      yum:
-       name: ~/dl/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm
-       state: present
+      shell: yum localinstall ~/dl/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm -y
+      #yum:
+      # name: ~/dl/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm
+      # state: present
       register: cmd_output
 
     - ansible.builtin.debug:
         var: cmd_output
 
     - name: Install SQLPlus
-      yum:
-       name: ~/dl/oracle-instantclient-sqlplus-21.11.0.0.0-1.el8.x86_64.rpm
-       state: present
+      shell: yum localinstall ~/dl/oracle-instantclient-sqlplus-21.11.0.0.0-1.el8.x86_64.rpm -y
+      #yum:
+      # name: ~/dl/oracle-instantclient-sqlplus-21.11.0.0.0-1.el8.x86_64.rpm
+      # state: present
       register: cmd_output
 
     - ansible.builtin.debug:
         var: cmd_output
 
     - name:  Run Oracle Preinstall
-      yum:
-       name: ~/dl/oracle-database-preinstall-23c-1.0-0.5.el8.x86_64.rpm
-       state: present
+      shell: yum localinstall ~/dl/oracle-database-preinstall-23c-1.0-0.5.el8.x86_64.rpm -y
+      #yum:
+      # name: ~/dl/oracle-database-preinstall-23c-1.0-0.5.el8.x86_64.rpm
+      # state: present
       register: cmd_output
 
     - ansible.builtin.debug:
         var: cmd_output
 
     - name: Install Database
-      yum:
-       name: ~/dl/oracle-database-free-23c-1.0-1.el8.x86_64.rpm
-       state: present
+      shell: yum localinstall ~/dl/oracle-database-free-23c-1.0-1.el8.x86_64.rpm -y
+      #yum:
+      # name: ~/dl/oracle-database-free-23c-1.0-1.el8.x86_64.rpm
+      # state: present
       register: cmd_output
 
     - ansible.builtin.debug:
