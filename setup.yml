@@ -18,6 +18,12 @@
        url: https://download.oracle.com/otn-pub/otn_software/db-free/oracle-database-free-23c-1.0-1.el8.x86_64.rpm
        dest: ~/oracle-database-free-23c-1.0-1.el8.x86_64.rpm
 
+    - name: Download Instantclient
+      get_url: 
+       url: https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm
+       dest: ~/oracle-instantclient-basic-21.11.0.0.0-1.el8.x86_64.rpm
+
+
 
 #    - name: Install package.
 #      yum:
