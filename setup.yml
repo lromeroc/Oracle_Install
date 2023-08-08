@@ -70,6 +70,13 @@
     - ansible.builtin.debug:
         var: cmd_output
 
+    - name: Run Database
+      shell: sqlplus / 
+      register: cmd_output 
+
+    - ansible.builtin.debug:
+        var: cmd_output
+
 #    - name: Install package.
 #      yum:
 #       name: /tmp/package.rpm
